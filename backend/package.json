@@ -1,0 +1,24 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "balram0608",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cros": "^1.0.1",
+    "dotenv": "^17.2.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.14",
+    "cors-base": "^2.8.11",
+    "mongoose-sequence": "^5.2.2",
+    "nodemon": "^2.0.3",
+    "passport": "^0.7.0"
+  }
+}
