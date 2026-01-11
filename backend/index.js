@@ -1,7 +1,8 @@
 const express = require("express");
 const app = express();
-const cors = require("cors-base");
+const cors = require("cors");
 const passport = require("passport");
+const logger = require('./utils/logger');
 
 require("dotenv").config();
 
@@ -24,6 +25,10 @@ connection.once("open", () =>
   console.log("mongoDB connection eastablished succesfully")
 );
 
+connection.on("error", (err) => {
+  console.error("MongoDB connection error:", err);
+});
+
 //middleware
 app.use(express.json());
 app.use(cors({
@@ -38,7 +43,7 @@ const accounts = require("./route/accounts");
 app.use("/accounts", accounts);
 const transactions = require("./route/transactions");
 app.use("/transactions", transactions);
-
+app.use(logger.logRequest);
 //acknoledge api
 app.get("/", (req, res) =>
   res.json({ message: "Welcome you are in the main page :)" })

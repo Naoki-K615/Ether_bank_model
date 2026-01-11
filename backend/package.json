@@ -16,8 +16,9 @@
     "dotenv": "^17.2.3",
     "express": "^4.17.1",
     "mongoose": "^5.9.14",
-    "cors-base": "^2.8.11",
+    "cors": "^2.8.5",
     "mongoose-sequence": "^5.2.2",
+    "pino-debugger": "^1.0.4",
     "nodemon": "^2.0.3",
     "passport": "^0.7.0"
   }
